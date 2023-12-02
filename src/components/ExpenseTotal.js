@@ -8,7 +8,7 @@ const ExpenseTotal = () => {
     let totalExp = 0;
     expenses.map(exp=>totalExp+=exp.cost) */
     return (
-        <div className={`alert alert-primary`}>
+        <div className={`alert alert-primary col-sm me-1 pt-4 text-center`}>
             <span>Spent so far: £{totalExpenses}</span>
         </div>
     );

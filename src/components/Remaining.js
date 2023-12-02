@@ -7,7 +7,7 @@ const Remaining = () => {
     }, 0);
     const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
     return (
-        <div className={`alert ${alertType}`}>
+        <div className={`alert ${alertType} col-3 me-1 pt-4 text-center`}>
             <span>Remaining: {currency}{remaining}</span>
         </div>
     );

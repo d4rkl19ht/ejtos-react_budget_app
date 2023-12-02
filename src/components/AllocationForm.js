@@ -6,15 +6,14 @@ const AllocationForm = (props) => {
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
-    const [action, setAction] = useState('');
+    const [action, setAction] = useState('Add');
 
     const submitEvent = () => {
-        let projRemaining = (action === 'Add' ? parseInt(cost) + parseInt(remaining) : parseInt(remaining) - parseInt(cost));
-            if(projRemaining < 0) {
-                alert("The value cannot exceed remaining funds  £"+remaining);
-                setCost("");
-                return;
-            }
+        if(cost > remaining && action === 'Add') {
+            alert("The value cannot exceed remaining funds  £"+remaining);
+            setCost("");
+            return;
+        }
 
         const expense = {
             name: name,
@@ -65,8 +64,9 @@ const AllocationForm = (props) => {
                         id='cost'
                         value={cost}
                         style={{ marginLeft: '2rem' , size: 10}}
-                        onChange={(event) => setCost(event.target.value)}>
-                        </input>
+                        onChange={(e)=>setCost(e.target.value)}
+                    >
+                    </input>
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
