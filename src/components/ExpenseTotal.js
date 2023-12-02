@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 const ExpenseTotal = () => {
-    const { totalExpenses } = useContext(AppContext);
+    const { totalExpenses,currency } = useContext(AppContext);
     /*const totalExpenses = expenses.reduce((total, item) => {
         return (total = total + item.cost);
     }, 0); 
@@ -9,7 +9,7 @@ const ExpenseTotal = () => {
     expenses.map(exp=>totalExp+=exp.cost) */
     return (
         <div className={`alert alert-primary col-sm me-1 pt-4 text-center`}>
-            <span>Spent so far: £{totalExpenses}</span>
+            <span>Spent so far: {currency}{totalExpenses}</span>
         </div>
     );
 };

@@ -37,7 +37,10 @@ const App = () => {
                             
                         {
                             /* Add ExpenseItem component here */
+                            <>
+                            <h3>Change Allocation</h3>
                             <AllocationForm />
+                            </>
                         }        
 
                         {

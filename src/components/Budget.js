@@ -23,8 +23,8 @@ const Budget = () => {
     return (
         <div className="col me-1 alert alert-secondary">
             <div className="row">
-                <div className="col-4 mt-2"><label for="budget" className="form-label">Budget: {currency}</label></div>
-                <div className="col-6"><input type="number" className="form-control"  step="10" value={budget} onChange={handleBudgetChange} name="budget" id="budget"></input></div>
+                <div className="col-5"><label for="budget" className="form-label mt-2">Budget:   {currency}</label></div>
+                <div className="col-7"><input type="number" className="form-control"  step="10" value={budget} onChange={handleBudgetChange} name="budget" id="budget"></input></div>
             </div>
         </div>
     );
