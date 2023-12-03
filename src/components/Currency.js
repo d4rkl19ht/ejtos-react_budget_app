@@ -11,8 +11,8 @@ const Currency = () => {
         
     }
     return (
-        <div className='alert alert-success col-sm'>
-            <select className="form-select" name="currency" id="currency" onChange={handleCurrencyChange}>
+        <div className='col-sm'>
+            <select className="form-select alert alert-success" style={{height:75}} name="currency" id="currency" onChange={handleCurrencyChange}>
                 <option value="$">$ Dollar</option>
                 <option selected value="£">£ Pound</option>
                 <option value="€">€ Euro</option>
